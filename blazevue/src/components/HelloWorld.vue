@@ -1,86 +1,12 @@
 <template>
   <div class="hello">
+    <h1>{{ nameweb }}</h1>
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <h2>Join your party and fight for league.</h2>
+    <button class="butt" v-on:click="say('I choose you')">{{ dec }}</button>
+    <p>{{ pika }}</p>
   </div>
+
 </template>
 
 <script>
@@ -88,7 +14,16 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      /* เขียนตัวแปรลงช่องนี */
+      nameweb:'Pokevue',
+      msg: 'Welcome to my Pokemon Website',
+      dec: 'Hello Trainer',
+      pika: 100
+    }
+  },
+  methods: {
+    say: function (message) {
+      alert(message)
     }
   }
 }
@@ -109,5 +44,19 @@ li {
 }
 a {
   color: #42b983;
+}
+.butt{
+  background-color: #f72d2d; /* Green */
+  border: none;
+  color: white;
+  width : 100px;
+  height: 100px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
 }
 </style>
